@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Aplicacion Grupo 13</string>
+    <string name="text_username">Username</string>
+    <string name="text_password">Password</string>
+    <string name="hint_username">user@domain.com</string>
+    <string name="button_login">LOGIN</string>
+    <string name="text_welcome">WELCOME</string>
+    <string name="text_introduction">INTRODUCTION</string>
+    <string name="text_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</string>
+    <string name="text_error">ERROR</string>
+    <string name="text_error_message">Invalid username or password</string>
+    <string name="text_action_search">Search</string>
+    <string name="text_action_settings">Settings</string>
+    <string name="text_action_logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

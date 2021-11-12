@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">App Grupo 13</string>
+    <string name="text_username">Nombre de usuario</string>
+    <string name="text_password">Contraseña</string>
+    <string name="hint_username">usuario@dominio.com</string>
+    <string name="button_login">INICIAR SESION</string>
+    <string name="text_welcome">BIENVENIDO</string>
+    <string name="text_introduction">INTRODUCCIÓN</string>
+    <string name="text_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</string>
+    <string name="text_error">ERROR</string>
+    <string name="text_error_message">Usuario o contraseña invalidos</string>
+    <string name="text_action_search">Buscar</string>
+    <string name="text_action_settings">Configuración</string>
+    <string name="text_action_logout">Cerrar sesión</string>
+</resources>
