@@ -6,11 +6,18 @@
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout-land/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout-sw480dp-land/activity_main.xml" value="0.334375" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout-sw480dp/activity_main.xml" value="0.30625" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/activity_drawer.xml" value="0.15" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/activity_to_do.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/activity_welcome.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/app_bar_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/content_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/fragment_about.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/fragment_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/fragment_to_do.xml" value="0.22" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/nav_header_drawer.xml" value="0.15" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/layout/task_list_items.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/menu/activity_main_drawer.xml" value="0.18" />
         <entry key="..\:/Users/Heri/AndroidStudioProjects/AppGrupo13/app/src/main/res/menu/menu_main_activity.xml" value="0.20416666666666666" />
       </map>
     </option>
