@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_todo"
         android:name="com.example.appgrupo13.ToDoFragment"
-        android:label="fragment_to_do"
+        android:label="To Do"
         tools:layout="@layout/fragment_to_do" >
         <action
             android:id="@+id/action_nav_todo_to_detailFragment"
@@ -17,11 +17,20 @@
     <fragment
         android:id="@+id/nav_about"
         android:name="com.example.appgrupo13.AboutFragment"
-        android:label="fragment_about"
+        android:label="About"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/nav_detail"
         android:name="com.example.appgrupo13.DetailFragment"
-        android:label="fragment_detail"
+        android:label="Detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/nav_new_task"
+        android:name="com.example.appgrupo13.NewTaskFragment"
+        android:label="New Task"
+        tools:layout="@layout/fragment_new_task" >
+        <action
+            android:id="@+id/action_nav_new_task_to_nav_todo"
+            app:destination="@id/nav_todo" />
+    </fragment>
 </navigation>

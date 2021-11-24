@@ -9,6 +9,10 @@ import android.widget.Button
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
+import com.example.appgrupo13.room_database.ToDoDatabase
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -74,19 +78,36 @@ class ToDoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recyclerTodoList: RecyclerView = view.findViewById(R.id.recyclerTodoList)
         var datos: ArrayList<Task> = ArrayList()
-        datos.add(Task("Ir al supermercado", "10:00", "Exito"))
-        datos.add(Task("Llevar carro a mantenimiento", "12:00", "Taller"))
-        datos.add(Task("Ir a lavanderia", "15:00", "Lavaseco"))
+        val room: ToDoDatabase = Room.databaseBuilder(context?.applicationContext!!,
+            ToDoDatabase::class.java, "ToDoDatabaase").build()
+        var todoDao = room.todoDao()
+        runBlocking {
+            launch {
+                var result = todoDao.getAllTasks()
+                for (todo in result){
+                    datos.add(Task(todo.id, todo.title, todo.time, todo.place))
+                }
+            }
+        }
+
         var taskAdapter = TaskAdapter(datos){
             val datos = Bundle()
+            datos.putInt("id", it.id)
+/*
             datos.putString("tarea", it.task)
             datos.putString("hora", it.time)
             datos.putString("lugar", it.place)
+*/
             Navigation.findNavController(view).navigate(R.id.nav_detail, datos)
         }
         recyclerTodoList.setHasFixedSize(true)
         recyclerTodoList.adapter = taskAdapter
         recyclerTodoList.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+/*
+        datos.add(Task("Ir al supermercado", "10:00", "Exito"))
+        datos.add(Task("Llevar carro a mantenimiento", "12:00", "Taller"))
+        datos.add(Task("Ir a lavanderia", "15:00", "Lavaseco"))
+*/
     }
 
     companion object {

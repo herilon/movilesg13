@@ -6,6 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.room.Room
+import com.example.appgrupo13.room_database.ToDoDatabase
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +40,7 @@ class DetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val fragmento: View = inflater.inflate(R.layout.fragment_detail, container, false)
+/*
         var tarea = requireArguments().getString("tarea")
         var hora = requireArguments().getString("hora")
         var lugar = requireArguments().getString("lugar")
@@ -45,7 +50,29 @@ class DetailFragment : Fragment() {
         textViewTarea.text = tarea
         textViewHora.text = hora
         textViewLugar.text = lugar
+*/
         return fragmento
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val textViewTarea: TextView = view.findViewById(R.id.textViewTarea)
+        val textViewHora: TextView = view.findViewById(R.id.textViewHora)
+        val textViewLugar: TextView = view.findViewById(R.id.textViewLugar)
+        var id = requireArguments().getInt("id")
+        val room: ToDoDatabase = Room.databaseBuilder(context?.applicationContext!!,
+            ToDoDatabase::class.java, "ToDoDatabaase").build()
+        var todoDao = room.todoDao()
+        runBlocking {
+            launch {
+                var result = todoDao.findById(id)
+                textViewTarea.text = result.title
+                textViewHora.text = result.time
+                textViewLugar.text = result.place
+
+            }
+        }
+
     }
 
     companion object {
