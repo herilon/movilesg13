@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "889875266530",
+    "project_id": "to-do-g13",
+    "storage_bucket": "to-do-g13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889875266530:android:fd1d1fc30ecf4c6c8c57bb",
+        "android_client_info": {
+          "package_name": "com.example.appgrupo13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889875266530-1on8naf9pagat594v7dahbgijinbcgea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpe46jwiitBjC_r9nulSl9BIDBF9hPrSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889875266530-1on8naf9pagat594v7dahbgijinbcgea.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

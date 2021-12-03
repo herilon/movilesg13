@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import com.example.appgrupo13.room_database.ToDoDatabase
 import androidx.room.*
 import com.example.appgrupo13.room_database.ToDo
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -64,9 +65,21 @@ class NewTaskFragment : Fragment() {
                 ToDoDatabase::class.java, "ToDoDatabaase").build()
             var todoDao = room.todoDao()
             var task = ToDo(0, tareaSeleccionada.task, edtTime.text.toString(), edtPlace.text.toString())
+            val dbFirebase = FirebaseFirestore.getInstance()
             runBlocking {
                 launch {
                     var result = todoDao.insertTask(task)
+                    if(result != -1L){
+                        dbFirebase.collection("ToDo")
+                            .document(result.toString())
+                            .set(
+                                hashMapOf(
+                                    "title" to tareaSeleccionada.task,
+                                    "time" to edtTime.text.toString(),
+                                    "place" to edtPlace.text.toString()
+                                )
+                            )
+                    }
 //                    Toast.makeText(context?.applicationContext!!, "" + result, Toast.LENGTH_LONG).show()
                 }
             }
